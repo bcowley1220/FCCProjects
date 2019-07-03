@@ -1,0 +1,295 @@
+html {
+    height: auto;
+    width: 100%;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-gap: 2em;
+    background: #fbf8f8;
+    justify-items: center;
+    align-items: center;
+
+}
+a {
+    text-decoration: none;
+}
+/* Header */
+    #header {
+        height: 8em;
+        width: 100%;
+        position: sticky;
+        top: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        background: #ffe1e6;
+        
+    }
+    #header-img {
+        width: 75%;
+        max-width: 300px;
+        max-height: 75px;
+        object-fit: fill;
+        /* position: relative; */
+        
+        
+
+    }
+    .picBox {
+        height: 5em;
+        width: 100%;
+        grid-column: 1/4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .name {
+        width: 100%;
+        height: 2.5em;
+        font-size: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: outset;
+        background-color: #eb5621;
+    }
+    #nav-bar {
+        width: 100%;
+        padding-right: 2.5em;
+    }
+    .list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        list-style-type: none;
+    }
+/* Title     */
+    #titlForm {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+
+    }
+    #form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #email {
+        width: 20em;
+    }
+    #titlForm input[type="submit"] {
+        background-color: #ffe1e6;
+        max-width: 12.5em;
+        width: 100%;
+        height: 2em;
+        margin-top: .5em;
+        cursor: pointer;
+    }
+    /* Add below to @media */
+    #titlForm input[type="submit"]:hover {
+        background-color: #e1fffa;
+        transition: background-color 1s;
+    }
+/* FAB */
+    #fab {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+    #fab > div {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        background: #9ac4dd;
+        /* margin-bottom: 1em; */
+        width: 80%;
+    }
+    #fab > div> h2 {
+        /* border: ridge #ffe1e6 5px; */
+        padding: .5em;
+        /* background-color: #ffe1e6; */
+    }
+/* Video */
+    #howMade {
+        display: flex;
+
+    }
+    #video {
+        width: 100%;
+        height: 10em;
+        justify-items: center;
+        align-items: center;
+    }
+/* Pricing */
+    #pricing {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+    .pWrap {
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        background: #e1e6ff;
+        margin-bottom: 1em;
+
+    }
+    .pItems {
+        display: flex;
+        flex-direction: column;
+        justify-items: flex-start;
+        align-items: flex-start;
+        width: 100%;
+    }
+    .pItems > h2 {
+        /* border: ridge #ffe1e6 5px; */
+        padding: .5em;
+        /* background-color: #ffe1e6; */
+        width: 80%;
+    }
+    .btn {
+        width: 10em;
+        height: 2em;
+        background-color: #ffe1e6;
+        cursor: pointer;
+    }
+    /* Add below to @media */
+    .btn:hover {
+        background-color: #e1fffa;
+        transition: background-color .5s;
+    }
+/* Footer */
+    .foot {
+        background-color: #ffe1e6;
+    }
+    .footL {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        list-style-type: none;
+    }
+@media (min-width: 650px) {
+    #header {
+        max-height: 75px;
+        flex-wrap: nowrap;
+    }
+    a {
+        font-size: 18px;
+    }
+    #header-img {
+        width: 100%;
+        height: 100%;
+        max-width: 220px;
+    }
+    .list {
+        flex-direction: column;
+        justify-items: space-around;
+        align-items: center;
+    }
+    #howMade {
+        display: flex;
+        height: 300px;
+        width: 100%;
+        justify-items: center;
+        align-items: center;
+    }
+    #video {
+        width: 100%;
+        height: 250px;
+        justify-items: center;
+        align-items: center;
+
+    }
+    .pItems {
+        justify-items: center;
+        align-items: center;
+    }
+    .pItems > h2 {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+    }
+    .btn {
+        margin-bottom: 5px;
+        width: 20em;
+    }
+}
+
+@media (min-width: 750px) {
+    .picBox {
+        position: relative;
+    }
+    #header-img {
+        width: 100%;
+        height: 100%;
+        max-width: 220px;
+    }
+    .list {
+        flex-direction: row;
+        justify-items: space-around;
+        align-items: center;
+    }
+}
+@media (min-width: 1000px) {
+    #header {
+        width: 75%;
+    }
+    #fab {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-row: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    #fab > div {
+        height: 276px;
+    }
+    #fab > div > p {
+        padding: 1em;
+    }
+    #howMade {
+        display: flex;
+        height: 400px;
+        width: 100%;
+
+    }
+    #video {
+        width: 80%;
+        height: 350px;
+        justify-items: center;
+        align-items: center;
+        margin-left: 7em;
+    }
+    #pricing {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .btn {
+        position: absolute;
+        bottom: 0;
+    }
+    .pItems {
+        position: relative;
+    }
+    .pWrap {
+        height: 300px;
+    }
+        
+}
